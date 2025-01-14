@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Properties\serviceDependencies.json" />
+    <Content Include="Properties\serviceDependencies.local.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Properties\serviceDependencies.local.json.user" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="MediatR" Version="12.4.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="9.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="9.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="9.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.1" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="7.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\TDD\src\DPS.Core\DPS.Core.csproj" />
+    <ProjectReference Include="..\..\..\TDD\src\DPS.Vendas.Application\DPS.Vendas.Application.csproj" />
+    <ProjectReference Include="..\..\..\TDD\src\DPS.Vendas.Data\DPS.Vendas.Data.csproj" />
+    <ProjectReference Include="..\DPS.Catalogo.Application\DPS.Catalogo.Application.csproj" />
+    <ProjectReference Include="..\DPS.Catalogo.Data\DPS.Catalogo.Data.csproj" />
+    <ProjectReference Include="..\DPS.Catalogo.Domain\DPS.Catalogo.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
